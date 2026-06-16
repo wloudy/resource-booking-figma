@@ -1,0 +1,24 @@
+{
+  "name": "resource-booking-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node node_modules/vite/bin/vite.js",
+    "build": "node node_modules/vite/bin/vite.js build",
+    "preview": "node node_modules/vite/bin/vite.js preview"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "esbuild": "^0.28.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.6.4",
+    "vuetify": "^4.1.0",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.7",
+    "vite-plugin-vuetify": "^2.1.3"
+  }
+}
