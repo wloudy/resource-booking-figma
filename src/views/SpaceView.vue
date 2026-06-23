@@ -87,13 +87,16 @@ function imageFor(item, index) {
               v-for="(slot, idx) in slots"
               :key="slot"
               size="small"
-              class="slot-btn"
-              :class="{ active: idx === 2 || idx === 5 }"
+              :class="[
+                slot === '14.00 - 15.00' ? 'slot-btn action-btn action-book' : 'slot-btn',
+                { active: idx === 2 || idx === 5 },
+              ]"
+              @click="slot === '14.00 - 15.00' ? bookFromCard(item) : null"
             >
-              {{ slot }}
+              {{ slot === '14.00 - 15.00' ? 'Забронировать' : slot }}
             </v-btn>
-            <v-btn class="btn-green" size="small" @click="bookFromCard(item)">Забронировать</v-btn>
-            <v-btn size="small" variant="tonal">Подробнее</v-btn>
+            <v-btn class="slot-btn action-btn">14.00 - 15.00</v-btn>
+            <v-btn class="slot-btn action-btn action-more">Подробнее</v-btn>
           </div>
         </v-card>
       </v-col>

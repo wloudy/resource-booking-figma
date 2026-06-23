@@ -199,6 +199,11 @@ body {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
+.slots-grid > * {
+  width: 100%;
+  min-width: 0 !important;
+}
+
 .slot-btn,
 .slot-custom {
   border-radius: 6px;
@@ -214,6 +219,22 @@ body {
 .slot-custom.active {
   background: #91b9b5;
   color: #fff;
+}
+
+.action-btn {
+  height: 34px !important;
+  min-height: 34px !important;
+  border-radius: 6px !important;
+}
+
+.action-book {
+  background: #4d807a !important;
+  color: #fff !important;
+}
+
+.action-more {
+  background: #e3e3e3 !important;
+  color: #2a2a2a !important;
 }
 
 .slot-btn:hover,

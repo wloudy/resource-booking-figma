@@ -1,10 +1,8 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
 import { imageLinks } from '../data/imageLinks'
 import { preloadImage } from '../utils/images'
 
-const router = useRouter()
 const fallbackAuth = 'https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=1800&q=80'
 const authBg = ref(fallbackAuth)
 
@@ -17,10 +15,6 @@ onMounted(() => {
     authBg.value = value
   })
 })
-
-function enterApp() {
-  router.push({ name: 'space' })
-}
 </script>
 
 <template>
@@ -37,8 +31,8 @@ function enterApp() {
       </div>
 
       <div class="auth-actions">
-        <v-btn class="pill-btn" size="x-large" @click="enterApp">Вход</v-btn>
-        <v-btn class="pill-btn" size="x-large" @click="enterApp">Регистрация</v-btn>
+        <v-btn class="pill-btn" size="x-large" :to="{ name: 'space' }">Вход</v-btn>
+        <v-btn class="pill-btn" size="x-large" :to="{ name: 'space' }">Регистрация</v-btn>
       </div>
 
       <p class="auth-description">
