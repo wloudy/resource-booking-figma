@@ -150,6 +150,25 @@ body {
 
 .page-shell {
   padding: 18px 18px 22px;
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.space-layout-row {
+  width: 100%;
+  margin: 0 !important;
+  align-items: flex-start;
+}
+
+.space-layout-row > .space-main-col {
+  flex: 0 0 68%;
+  max-width: 68%;
+}
+
+.space-layout-row > .space-side-col {
+  flex: 0 0 32%;
+  max-width: 32%;
 }
 
 .space-card {
@@ -419,6 +438,12 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .space-layout-row > .space-main-col,
+  .space-layout-row > .space-side-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
   .slots-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
