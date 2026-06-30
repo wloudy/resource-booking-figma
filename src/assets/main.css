@@ -156,19 +156,28 @@ body {
 }
 
 .space-layout-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
+  gap: 18px;
   width: 100%;
   margin: 0 !important;
   align-items: flex-start;
 }
 
+.space-layout-row > .v-col {
+  padding: 0 !important;
+}
+
 .space-layout-row > .space-main-col {
-  flex: 0 0 68%;
-  max-width: 68%;
+  width: auto;
+  max-width: none;
+  min-width: 0;
 }
 
 .space-layout-row > .space-side-col {
-  flex: 0 0 32%;
-  max-width: 32%;
+  width: auto;
+  max-width: none;
+  min-width: 0;
 }
 
 .space-card {
@@ -437,11 +446,15 @@ body {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
   .space-layout-row > .space-main-col,
   .space-layout-row > .space-side-col {
-    flex: 0 0 100%;
+    width: 100%;
     max-width: 100%;
+  }
+
+  .space-layout-row {
+    grid-template-columns: 1fr;
   }
 
   .slots-grid {
